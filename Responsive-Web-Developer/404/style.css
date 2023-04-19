@@ -87,7 +87,7 @@ section {
 }
 
 .btn:hover {
-  color: #222222;
+  color: var(--main);
   box-shadow: inset 0 100px 0 0 var(--light);
 }
 
