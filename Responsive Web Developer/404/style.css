@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+:root {
+  /* fonts family*/
+
+  --inconsolata: "Inconsolata", monospace;
+  --space-mono: "Space Mono", monospace;
+
+  /* colours */
+
+  --main: #333333;
+  --secondary: #4f4f4f;
+  --light: #ffffff;
+
+  /*font-size*/
+
+  --fs-paragraph-mobile: 1.125rem;
+  --fs-paragraph-desktop: 1.5rem;
+  --fs-title-mobile: 2rem;
+  --fs-title-desktop: 3rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 2rem 4rem 0 4rem;
+  font-family: var(--inconsolata);
+  font-weight: 700;
+}
+
+.img img {
+  width: 30rem;
+  height: 30rem;
+}
+
+main {
+  display: grid;
+  min-height: 90vh;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.article {
+  padding-left: 4rem;
+  font-family: var(--space-mono);
+}
+
+.title {
+  font-weight: 700;
+  font-size: var(--fs-title-desktop);
+  max-width: 500px;
+}
+
+.paragraph {
+  margin-top: 2.25rem;
+  font-size: var(--fs-paragraph-mobile);
+  max-width: 300px;
+}
+
+.btn {
+  margin-top: 4rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 24px 43px;
+  background-color: var(--main);
+  color: var(--light);
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+.btn:hover {
+  color: #222222;
+  box-shadow: inset 0 100px 0 0 var(--light);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #bdbdbd;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 825px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 8rem;
+    padding-bottom: 0;
+  }
+  .title {
+    font-size: var(--fs-title-mobile);
+  }
+  .paragraph {
+    font-size: var(--fs-paragraph-mobile);
+  }
+}
