@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #a9a9a9;
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-inline: auto;
+  padding-block: 60px;
+  font-family: "PT Serif";
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.navbar {
+  width: 50%;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+.navbar > p {
+  width: 65%;
+  margin-top: 5px;
+}
+
+.cards-container {
+  width: 70%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  -moz-column-gap: 18px;
+  column-gap: 18px;
+  row-gap: 50px;
+  justify-content: center;
+  margin-bottom: 100px;
+  padding-left: 7px;
+}
+
+.card:nth-child(even) {
+  position: relative;
+  top: 50px;
+}
+
+.fifth {
+  padding-top: 100px;
+}
+
+.card .inner-card {
+  display: flex;
+  gap: 6px;
+}
+
+.card .rt-caption {
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #000000;
+  letter-spacing: 0.1px;
+}
+
+.card .bottom-caption {
+  color: #000000;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 21px;
+}
+
+.card img {
+  width: 200px;
+  height: 300px;
+}
+
+footer {
+  text-align: center;
+  font-family: "poppins";
+  font-size: 12px;
+  color: #a9a9a9;
+}
+
+@media screen and (max-width: 435px) {
+  header {
+    width: 95%;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar p {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+  }
+
+  .card img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .bottom-caption {
+    font-size: 10px;
+  }
+
+  .fifth {
+    padding-top: 0;
+  }
+}
