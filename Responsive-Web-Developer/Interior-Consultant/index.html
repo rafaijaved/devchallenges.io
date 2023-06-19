@@ -55,7 +55,9 @@
         </ul>
       </div>
     </nav>
-    <main class="w-5/6 m-auto grid grid-cols-2 items-center pt-16 gap-10">
+    <main
+      class="w-5/6 h-[calc(100vh-12rem)] m-auto grid grid-cols-2 items-center pt-16 gap-10"
+    >
       <div class="text-white">
         <h1 class="font-lora text-5xl mb-8">Modern Interior</h1>
         <p class="font-montserrat text-xl mb-8">
@@ -71,20 +73,35 @@
       </div>
       <div class="relative">
         <img src="./assets/photo1.png" alt="" />
-        <div class="absolute top-0 p-5 bg-body flex flex-col">
-          <div class="flex gap-3 items-center">
-            <img class="rounded-full w-16" src="./assets/photo2.png" alt="" />
-            <div>
-              <p class="text-white">Aliza Webber</p>
-              <p class="text-gray-500">Interior Designer</p>
+        <div
+          class="absolute -bottom-20 right-10 p-5 bg-body drop-shadow-lg flex flex-col w-96"
+        >
+          <div class="flex gap-4 items-center">
+            <img class="rounded-full w-12" src="./assets/photo2.png" alt="" />
+            <div class="font-montserrat">
+              <p class="text-white text-sm">Aliza Webber</p>
+              <p class="text-gray-500 text-xs">Interior Designer</p>
             </div>
           </div>
-          <p class="text-white font-lora text-xl">
-            Designed in 2020 by Aliza Webber
+          <p class="text-white font-lora text-2xl pt-4">
+            Designed in 2020 by <br />
+            Aliza Webber
           </p>
         </div>
       </div>
     </main>
+    <footer class="text-center mt-28">
+      <p class="text-gray-400 font-montserrat text-sm">
+        created by
+        <a
+          class="font-bold"
+          href="https://github.com/rafaijaved"
+          target="_blank"
+          >Rafai Javed</a
+        >
+        - devChallenges.io
+      </p>
+    </footer>
     <script src="" async defer></script>
   </body>
 </html>
