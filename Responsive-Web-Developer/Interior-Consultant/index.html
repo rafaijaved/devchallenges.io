@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-body">
     <nav
@@ -68,17 +69,19 @@
           <i class="fa-solid fa-arrow-right-long" style="color: #ffffff"></i>
         </p>
       </div>
-      <div>
+      <div class="relative">
         <img src="./assets/photo1.png" alt="" />
-        <div class="right-2 top-2 flex flex-col">
-          <div class="flex">
+        <div class="absolute top-0 p-5 bg-body flex flex-col">
+          <div class="flex gap-3 items-center">
             <img class="rounded-full w-16" src="./assets/photo2.png" alt="" />
             <div>
-              <p>Aliza Webber</p>
-              <p>Interior Designer</p>
+              <p class="text-white">Aliza Webber</p>
+              <p class="text-gray-500">Interior Designer</p>
             </div>
           </div>
-          <p>Designed in 2020 by Aliza Webber</p>
+          <p class="text-white font-lora text-xl">
+            Designed in 2020 by Aliza Webber
+          </p>
         </div>
       </div>
     </main>
