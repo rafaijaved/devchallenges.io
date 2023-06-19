@@ -21,17 +21,31 @@
   </head>
   <body class="bg-body">
     <nav
-      class="flex justify-between items-center w-5/6 mx-auto py-9 text-white"
+      class="flex justify-between items-center w-5/6 mx-auto py-9 text-white sm:py-7 sm:mx-5"
     >
       <div>
         <h1
-          class="border-2 border-white p-2 font-crimson uppercase cursor-pointer text-sm"
+          class="border-2 border-white p-2 font-crimson uppercase cursor-pointer text-sm sm:text-sm"
         >
           This Interior
         </h1>
       </div>
       <div>
-        <ul class="flex gap-20 font-montserrat">
+        <i
+          class="menu fa-solid fa-bars fa-2xl absolute top-11 right-5 cursor-pointer sm:block md:hidden lg:hidden xl:hidden 2xl:hidden"
+          style="color: #ffffff"
+        ></i>
+      </div>
+      <div
+        class="list sm:-translate-y-full sm:z-50 sm:absolute sm:right-0 sm:top-0 sm:bg-body sm:h-screen sm:w-screen"
+      >
+        <i
+          class="close fa-solid fa-xmark absolute fa-2xl right-5 top-10 cursor-pointer sm:block md:hidden lg:hidden xl:hidden 2xl:hidden"
+          style="color: #ffffff"
+        ></i>
+        <ul
+          class="flex gap-20 font-montserrat sm:flex-col sm:items-center sm:justify-center sm:gap-10 sm:h-screen"
+        >
           <li
             class="cursor-pointer hover:font-bold hover:underline underline-offset-8 transition-all"
           >
@@ -56,11 +70,11 @@
       </div>
     </nav>
     <main
-      class="w-5/6 h-[calc(100vh-12rem)] m-auto grid grid-cols-2 items-center pt-16 gap-10"
+      class="w-5/6 h-[calc(100vh-12rem)] m-auto grid grid-cols-2 items-center pt-16 gap-10 sm:flex sm:flex-col sm:pt-5 sm:gap-6 sm:items-start sm:justify-center"
     >
       <div class="text-white">
-        <h1 class="font-lora text-5xl mb-8">Modern Interior</h1>
-        <p class="font-montserrat text-xl mb-8">
+        <h1 class="font-lora text-5xl mb-8 sm:text-4xl">Modern Interior</h1>
+        <p class="font-montserrat text-xl mb-8 sm:text-sm sm:mb-5">
           A full-Service residential & commercial <br />
           interior design and staging company <br />
           offering professional organizing & <br />
@@ -72,9 +86,9 @@
         </p>
       </div>
       <div class="relative">
-        <img src="./assets/photo1.png" alt="" />
+        <img class="" src="./assets/photo1.png" alt="" />
         <div
-          class="absolute -bottom-20 right-10 p-5 bg-body drop-shadow-lg flex flex-col w-96"
+          class="absolute -bottom-20 right-10 p-5 bg-body drop-shadow-lg flex flex-col w-96 sm:w-64 sm:right-5 sm:p-3"
         >
           <div class="flex gap-4 items-center">
             <img class="rounded-full w-12" src="./assets/photo2.png" alt="" />
@@ -83,7 +97,7 @@
               <p class="text-gray-500 text-xs">Interior Designer</p>
             </div>
           </div>
-          <p class="text-white font-lora text-2xl pt-4">
+          <p class="text-white font-lora text-2xl pt-4 sm:text-base sm:pt-2">
             Designed in 2020 by <br />
             Aliza Webber
           </p>
@@ -91,7 +105,7 @@
       </div>
     </main>
     <footer class="text-center mt-28">
-      <p class="text-gray-400 font-montserrat text-sm">
+      <p class="text-gray-400 font-montserrat text-sm sm:text-xs">
         created by
         <a
           class="font-bold"
@@ -102,6 +116,48 @@
         - devChallenges.io
       </p>
     </footer>
-    <script src="" async defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: { max: "424px" },
+
+            md: { min: "425px", max: "767px" },
+
+            lg: { min: "768px", max: "1023px" },
+
+            xl: { min: "1024px", max: "1439px" },
+
+            "2xl": { min: "1440px" },
+          },
+          fontFamily: {
+            montserrat: ["Montserrat", "sans-serif"],
+            crimson: ["Crimson Pro", "serif"],
+            lora: ["Lora", "serif"],
+          },
+
+          extend: {
+            colors: {
+              body: "#181719",
+            },
+            fontSize: {
+              xxs: "0.5rem",
+            },
+          },
+        },
+      };
+
+      var logo = document.querySelector(".menu");
+      var closeBtn = document.querySelector(".close");
+      var menu = document.querySelector(".list");
+
+      logo.addEventListener("click", function () {
+        menu.classList.toggle("showmenu");
+      });
+
+      closeBtn.addEventListener("click", function () {
+        menu.classList.toggle("showmenu");
+      });
+    </script>
   </body>
 </html>
